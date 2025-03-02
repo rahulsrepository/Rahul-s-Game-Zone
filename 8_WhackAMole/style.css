@@ -1,0 +1,98 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    background: url(image/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat; /* Prevents repeating */
+    background-position: center;
+    background-attachment: fixed; /* Keeps background fixed */
+}
+
+#board {
+    width: 540px;
+    height: 540px;
+    background: url(image/soil.png);
+    background-size: cover;
+    background-repeat: no-repeat; /* Prevents repeating */
+    border: 5px solid rgb(0, 0, 0);
+    border-radius: 25px;
+    margin-left: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#board div {
+    width: 135px;
+    height: 135px;
+    background-image: url(image/pipe.png);
+    background-size: cover;
+    background-repeat: no-repeat; /* Prevents repeating */
+}
+
+#board div img {
+    width: 80px;
+    height: 80px;
+
+    /* Prevent dragging */
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+}
+
+/* Responsive Design */
+
+/* Laptops (max-width: 1024px) */
+@media (max-width: 1024px) {
+    #board {
+        width: 450px;
+        height: 450px;
+    }
+
+    #board div {
+        width: 112px;
+        height: 112px;
+    }
+
+    #board div img {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+/* Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+    #board {
+        width: 360px;
+        height: 360px;
+    }
+
+    #board div {
+        width: 90px;
+        height: 90px;
+    }
+
+    #board div img {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* Mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+    #board {
+        width: 300px;
+        height: 300px;
+    }
+
+    #board div {
+        width: 75px;
+        height: 75px;
+    }
+
+    #board div img {
+        width: 50px;
+        height: 50px;
+    }
+}
